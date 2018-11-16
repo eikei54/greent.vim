@@ -36,7 +36,8 @@ function! s:set() abort
     let lightsalmon       = {'gui': '#ffaf87', 'cterm': '175'}
     let lightseagreen     = {'gui': '#00afaf', 'cterm': '37' }
     let lightyellow       = {'gui': '#d7d7af', 'cterm': '187'}
-    let magenta           = {'gui': '#af00af', 'cterm': '127'}
+    let magenta           = {'gui': '#ff00ff', 'cterm': '11'}
+    let magenta1          = {'gui': '#af00af', 'cterm': '127'}
     let mediumturquoise   = {'gui': '#5fd7d7', 'cterm': '80' }
     let mistyrose         = {'gui': '#d7afaf', 'cterm': '181'}
     let orangered         = {'gui': '#ff5f00', 'cterm': '202'}
@@ -48,6 +49,14 @@ function! s:set() abort
     let springgreen       = {'gui': '#00af5f', 'cterm': '35' }
     let steelblue         = {'gui': '#5fafff', 'cterm': '75' }
     let turquoise         = {'gui': '#008787', 'cterm': '30' }
+    let springgreen3      = {'gui': '#00d75f', 'cterm': '41' }
+    let green3            = {'gui': '#00af00', 'cterm': '40' }
+    let green4            = {'gui': '#008700', 'cterm': '28' }
+    let black             = {'gui': '#000000', 'cterm': '0'  }
+    let darkgreen         = {'gui': '#005f00', 'cterm': '22' }
+    let deeppink1         = {'gui': '#ff0087', 'cterm': '198'}
+    let blue1             = {'gui': '#0000ff', 'cterm': '21' }
+
 
     let none              = {'gui': 'NONE',      'cterm': 'NONE'}
     let bold              = {'gui': 'bold',      'cterm': 'bold'}
@@ -60,12 +69,13 @@ function! s:set() abort
 
     let highlight_group = {}
 
-    let highlight_group.Normal = [deepskyblue, darkseagreen, none, none]
+"    let highlight_group.Normal = [deepskyblue, darkseagreen, none, none]
+    let highlight_group.Normal = [black, darkseagreen, none, none]
     let highlight_group.Visual = [none, palegreen, none, none]
     " Cursor
     let highlight_group.Cursor = [deepskyblue, lightcoral, none, none]
     if &cursorline
-        let highlight_group.CursorLine = [none, lightyellow, none, none]
+        let highlight_group.CursorLine = [none, none, underline, none]
         let highlight_group.CursorLineNr = [lightcoral, lightyellow, bolditalic, none]
     else
         let highlight_group.CursorLineNr = [lightcoral, none, bolditalic, none]
@@ -82,10 +92,10 @@ function! s:set() abort
     " Syntax groups
     let highlight_group.Comment     = [lightseagreen, none, italic, none]
     let highlight_group.Identifier  = [lightgoldenrod, none, none, none]
-    let highlight_group.Statement   = [cadetblue, none, bold, none]
+    let highlight_group.Statement   = [deeppink1, none, bold, none]
     let highlight_group.Function    = [lightcoral, none, bold, none]
-    let highlight_group.Constant    = [steelblue, none, none, none]
-    let highlight_group.String      = [cornflowerblue, none, italic, none]
+    let highlight_group.Constant    = [blue1, none, none, none]
+    let highlight_group.String      = [blue1, none, italic, none]
     let highlight_group.Number      = [chartreuse, none, none, none]
     let highlight_group.Type        = [lightsalmon, none, none, none]
     let highlight_group.Special     = [hotpink, none, none, none]
