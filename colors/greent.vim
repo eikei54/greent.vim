@@ -293,9 +293,9 @@ function! s:set() abort
     let highlight_group.Cursor = [deepskyblue6, lightcoral, none, none]
     if &cursorline
         let highlight_group.CursorLine = [none, none, underline, none]
-        let highlight_group.CursorLineNr = [darkgreen, none, bolditalic, none]
+        let highlight_group.CursorLineNr = [green4, none, bold, none]
     else
-        let highlight_group.CursorLineNr = [darkgreen, none, bolditalic, none]
+        let highlight_group.CursorLineNr = [green4, none, bold, none]
     endif
 
     " Sidebar
@@ -318,7 +318,7 @@ function! s:set() abort
     let highlight_group.Special     = [hotpink3, none, none, none]
     let highlight_group.PreProc     = [salmon1, none, bold, none]
     let highlight_group.Todo        = [cadetblue1, honeydew2, bold, none]
-    let highlight_group.Error       = [honeydew2, deeppink4, bold, none]
+    let highlight_group.Error       = [red3, none, bold, none]
     let highlight_group.Underlined  = [khaki3, none, underline, none]
 
 
